@@ -47,8 +47,7 @@ const Products = () => {
 
   // Search functionality
   function handleSearch(term) {
-    const items = data.products?.filter(
-      (item) =>
+    const items = data.products?.filter((item) =>
         item.title.toLowerCase().includes(term.toLowerCase()) ||
         item.description.toLowerCase().includes(term.toLowerCase())
     );
@@ -78,7 +77,7 @@ const Products = () => {
           <div className="w-full pt-4 pb-4 flex justify-center">
             {/* <label className="pr-3">Search</label> */}
             <input
-              placeholder="serch item"
+              placeholder="search item"
               className="p-2 pl-6 rounded-3xl w-80"
               onChange={(e) => {
                 handleSearch(e.target.value);
